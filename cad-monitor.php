@@ -13,6 +13,8 @@
     if(isset($_POST['marca']) && $_POST['marca'] != ''){
         $inserir = array();
 
+        $inserir['pa'] = $_POST['pa'];
+        $inserir['andar'] = $_POST['andar'];
         $inserir['marca'] = $_POST['marca'];
         $inserir['modelo'] = $_POST['modelo'];
         $inserir['polegada'] = $_POST['polegada'];

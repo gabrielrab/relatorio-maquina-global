@@ -34,23 +34,33 @@ function buscar_processador($conexao){
 }
 
 function cadastrar_maquina($conexao, $inserir){
-   $sql="INSERT INTO maquina (pa, tipo, processador, hd, memoria, monitor) VALUES (
+   $sql="INSERT INTO maquina (pa, tipo, processador, hd, memoria) VALUES (
       '{$inserir['pa']}',
       '{$inserir['tipo']}',
       '{$inserir['processador']}',
       '{$inserir['hd']}',
-      '{$inserir['memoria']}',
-      '{$inserir['monitor']}'
+      '{$inserir['memoria']}'
    );";
 
    mysqli_query($conexao, $sql) or die ("Erro ao inserir dados: ".mysqli_error($conexao));
 }
 
 function cadastrar_monitor($conexao, $inserir){
-   $sql="INSERT INTO monitor (marca, modelo, polegada) VALUES (
+   $sql="INSERT INTO monitor (pa, andar, marca, modelo, polegada) VALUES (
+      '{$inserir['pa']}',
+      '{$inserir['andar']}',
       '{$inserir['marca']}',
       '{$inserir['modelo']}',
       '{$inserir['polegada']}'
+   );";
+
+   mysqli_query($conexao, $sql) or die ("Erro ao inserir dados: ".mysqli_error($conexao));
+}
+
+function cadastrar_cpu($conexao, $inserir){
+   $sql="INSERT INTO processador (tipo, ghz) VALUES (
+      '{$inserir['tipo']}',
+      '{$inserir['ghz']}'
    );";
 
    mysqli_query($conexao, $sql) or die ("Erro ao inserir dados: ".mysqli_error($conexao));

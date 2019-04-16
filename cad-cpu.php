@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Cadasro Processa</title>
+        <title>CPU Processa</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="style.css">
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
@@ -10,16 +10,13 @@
  <?php
     include_once("banco.php");
 
-    if(isset($_POST['pa']) && $_POST['pa'] != ''){
+    if(isset($_POST['tipo']) && $_POST['tipo'] != ''){
         $inserir = array();
 
-        $inserir['pa'] = $_POST['pa'];
         $inserir['tipo'] = $_POST['tipo'];
-        $inserir['processador'] = $_POST['processador'];
-        $inserir['hd'] = $_POST['hd'];
-        $inserir['memoria'] = $_POST['memoria'];
+        $inserir['ghz'] = $_POST['ghz'];
 
-        cadastrar_maquina($conexao, $inserir);
+        cadastrar_cpu($conexao, $inserir);
 
         echo('<div class="alert alert-success" role="alert">
         Cadastro Realizado! <a href="index.php">Continuar cadastrando</a>

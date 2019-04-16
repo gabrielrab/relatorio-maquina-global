@@ -39,6 +39,8 @@
       <h6>Tamanho HD:</h6>
       <select name="hd" id="" class="form-control">
         <option hidden>Hard Disk</option>
+        <option>80 GB</option>
+        <option>160 GB</option>
         <option>320 GB</option>
         <option>500 GB</option>
         <option>720 GB</option>
@@ -52,19 +54,8 @@
         <option>6 GB</option>
         <option>8 GB</option>
       </select>
-      <a href="monitor.php">Adicionar Monitor</a>
-      <h6>Monitor:</h6>
-      <select name="monitor" id="" class="form-control">
-        <option hidden>Monitor</option>
-        <?php
-            $buscar = buscar_monitor($conexao);
-            foreach($buscar as $i):
-        ?>
-            <option><?= $i['marca']; ?> - <?= $i['modelo']; ?> - <?= $i['polegada']; ?>"</option>
-        <?php
-          endforeach;
-        ?>
-      </select>
+      <a href="monitor.php">Adicionar Monitor</a><br>
+      <a href="processador.php">Adicionar Processador</a>
       <button class="btn btn-lg btn-primary btn-block m-up" type="submit">Cadastrar</button>
         <p class="mt-5 mb-3 text-muted">&copy; Feito por Gabriel Rabelo</p>
   </form>
