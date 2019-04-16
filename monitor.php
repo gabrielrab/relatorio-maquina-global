@@ -17,10 +17,11 @@
       <h6>PA:</h6>
       <input type="number" name="pa" class="form-control"placeholder="Digite a PA" required>
       <h6>Andar:</h6>
-      <select name="marca" id="" class="form-control">
+      <select name="andar" id="" class="form-control">
         <option hidden>Selecione</option>
         <option>1</option>
         <option>2</option>
+        <option>3</option>
         <option>Outro</option>
       </select>
       <h6>Marca:</h6>

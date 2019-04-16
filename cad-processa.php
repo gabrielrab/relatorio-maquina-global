@@ -14,6 +14,7 @@
         $inserir = array();
 
         $inserir['pa'] = $_POST['pa'];
+        $inserir['andar'] = $_POST['andar'];
         $inserir['tipo'] = $_POST['tipo'];
         $inserir['processador'] = $_POST['processador'];
         $inserir['hd'] = $_POST['hd'];

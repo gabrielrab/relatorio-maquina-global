@@ -15,6 +15,14 @@
      <h1>Cadastrar Máquina</h1>
      <h6>Número da PA:</h6>
       <input type="mumber" class="form-control" name="pa" placeholder="PA:" required>
+      <h6>Andar:</h6>
+      <select name="andar" id="" class="form-control">
+        <option hidden>Selecione</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>Outro</option>
+      </select>
       <h6>Tipo da Máquina:</h6>
       <select name="tipo" id="" class="form-control">
         <option hidden>Selecione</option>

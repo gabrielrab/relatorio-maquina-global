@@ -34,8 +34,9 @@ function buscar_processador($conexao){
 }
 
 function cadastrar_maquina($conexao, $inserir){
-   $sql="INSERT INTO maquina (pa, tipo, processador, hd, memoria) VALUES (
+   $sql="INSERT INTO maquina (pa, andar, tipo, processador, hd, memoria) VALUES (
       '{$inserir['pa']}',
+      '{$inserir['andar']}',
       '{$inserir['tipo']}',
       '{$inserir['processador']}',
       '{$inserir['hd']}',
