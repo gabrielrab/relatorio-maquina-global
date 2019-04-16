@@ -1,10 +1,16 @@
 <?php
 
-$bdServidor = 'localhost';
-$porta = '3306';
-$bdUsuario = 'root';
-$bdSenha = '';
-$bdBanco = 'global';
+// $bdServidor = 'localhost';
+// $porta = '3306';
+// $bdUsuario = 'root';
+// $bdSenha = '';
+// $bdBanco = 'global';
+
+$bdServidor = 'us-cdbr-iron-east-02.cleardb.net';
+$bdUsuario = 'bbf4f164858927';
+$bdSenha = '1bb50750';
+$bdBanco = 'heroku_b1ff7657d8edef0';
+
 
 $conexao = mysqli_connect($bdServidor, $bdUsuario, $bdSenha, $bdBanco);
 
