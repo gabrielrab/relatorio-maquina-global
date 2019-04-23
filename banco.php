@@ -66,8 +66,9 @@ function cadastrar_monitor($conexao, $inserir){
 
 
 function cadastrar_monitor_list($conexao, $inserir){
-   $sql="INSERT INTO listagem_monitor (pa, monitor) VALUES (
+   $sql="INSERT INTO listagem_monitor (pa, andar, monitor) VALUES (
       '{$inserir['pa']}',
+      '{$inserir['andar']}',
       '{$inserir['monitor']}'
    );";
 

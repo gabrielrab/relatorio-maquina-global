@@ -36,12 +36,25 @@ create table processador (
     ghz int(11) NOT NULL
 );
 
-ALTER TABLE `monitor` ADD `pa` INT NOT NULL AFTER `id_monitor`, ADD `andar` INT NOT NULL AFTER `pa`;
+ALTER TABLE `monitor` DROP `quantidade` INT NOT NULL AFTER `polegada`;
+
+ALTER TABLE `monitor` DROP `andar`;
 
 ALTER TABLE maquina ADD andar INT NOT NULL AFTER id_maquina;
 ALTER TABLE `maquina`
   DROP `monitor`;
 
-select * from maquina;
+select * from listagem_monitor;
+
+delete from maquina where id_maquina = 32; # and id_maquina = 2 and id_maquina = 22 and id_maquina = 32;
+
+delete from listagem_monitor where id = 32; #32, 42, 52
+
+create table listagem_monitor (
+	id int(11) NOT NULL primary key auto_increment,
+    pa int(11) NOT NULL,
+    andar int(11) NOT NULL,
+    monitor varchar(255) NOT NULL
+);
 
 select count(id_maquina) from maquina where memoria = "8 GB";

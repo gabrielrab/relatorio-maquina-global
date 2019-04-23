@@ -14,6 +14,7 @@
         $inserir = array();
         
         $inserir['pa'] = $_POST['pa'];
+        $inserir['andar'] = $_POST['andar'];
         $inserir['monitor'] = $_POST['monitor'];
 
 
@@ -22,7 +23,7 @@
         echo('Ultimo cadastro: PA: '.$inserir['pa'].' - Monitor: '.$inserir['monitor']);
 
         echo('<div class="alert alert-success" role="alert">
-        Cadastro Realizado! <a href="monitor.php">Continuar cadastrando</a>
+        Cadastro Realizado! <a href="cadastro-monitor.php">Continuar cadastrando</a>
       </div>');
 
     } else{
