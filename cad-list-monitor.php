@@ -10,14 +10,16 @@
  <?php
     include_once("banco.php");
 
-    if(isset($_POST['marca']) && $_POST['marca'] != ''){
+    if(isset($_POST['pa']) && $_POST['pa'] != ''){
         $inserir = array();
         
-        $inserir['marca'] = $_POST['marca'];
-        $inserir['modelo'] = $_POST['modelo'];
-        $inserir['polegada'] = $_POST['polegada'];
+        $inserir['pa'] = $_POST['pa'];
+        $inserir['monitor'] = $_POST['monitor'];
 
-        cadastrar_monitor($conexao, $inserir);
+
+        cadastrar_monitor_list($conexao, $inserir);
+
+        echo('Ultimo cadastro: PA: '.$inserir['pa'].' - Monitor: '.$inserir['monitor']);
 
         echo('<div class="alert alert-success" role="alert">
         Cadastro Realizado! <a href="monitor.php">Continuar cadastrando</a>

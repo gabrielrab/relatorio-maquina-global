@@ -22,6 +22,10 @@
 
         cadastrar_maquina($conexao, $inserir);
 
+        echo('<div class="alert alert-primary" role="alert">
+        Pa: '.$inserir['pa'].'<br>Andar:'.$inserir['andar'].'<br>Tipo: '.$inserir['tipo'].'<br>Processador: '.$inserir['processador'].'<br>Hd: '.$inserir['hd'].'<br>Memória: '.$inserir['memoria'].'
+        </div>');
+
         echo('<div class="alert alert-success" role="alert">
         Cadastro Realizado! <a href="index.php">Continuar cadastrando</a>
       </div>');

@@ -14,16 +14,6 @@
   <form action="cad-monitor.php" method="POST">
      <a href="index.php">Index</a>
      <h1>Cadastrar Monitor</h1>
-      <h6>PA:</h6>
-      <input type="number" name="pa" class="form-control"placeholder="Digite a PA" required>
-      <h6>Andar:</h6>
-      <select name="andar" id="" class="form-control">
-        <option hidden>Selecione</option>
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>Outro</option>
-      </select>
       <h6>Marca:</h6>
       <select name="marca" id="" class="form-control">
         <option hidden>Selecione</option>
@@ -41,6 +31,7 @@
       <input type="text" name="modelo" class="form-control" placeholder="Digite o modelo" required>
       <h6>Polegada:</h6>
       <input type="number" name="polegada" class="form-control" placeholder="Digite as polegadas" required>
+      <a href="cadastro-monitor.php">Cadastro Monitor</a><br>
       <button class="btn btn-lg btn-primary btn-block m-up" type="submit">Cadastrar</button>
         <p class="mt-5 mb-3 text-muted">&copy; Feito por Gabriel Rabelo</p>
   </form>

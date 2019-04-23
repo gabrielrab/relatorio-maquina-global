@@ -22,10 +22,18 @@ if (mysqli_connect_errno($conexao)) {
 }
 
 function buscar_processador($conexao){
-    $sql="SELECT * FROM processador";
+    $sql="SELECT * FROM processador;";
     $resultado = mysqli_query($conexao, $sql) or die(mysqli_error($conexao));
     return mysqli_fetch_all($resultado, MYSQLI_ASSOC);
  }
+
+function listar_maquinas($conexao){
+   $sql="SELECT * FROM maquina ORDER BY pa ASC;";
+   
+   $resultado = mysqli_query($conexao, $sql) or die(mysqli_error($conexao));
+   
+   return mysqli_fetch_all($resultado, MYSQLI_ASSOC);
+}
 
  function buscar_monitor($conexao){
    $sql="SELECT * FROM monitor";
@@ -47,12 +55,20 @@ function cadastrar_maquina($conexao, $inserir){
 }
 
 function cadastrar_monitor($conexao, $inserir){
-   $sql="INSERT INTO monitor (pa, andar, marca, modelo, polegada) VALUES (
-      '{$inserir['pa']}',
-      '{$inserir['andar']}',
+   $sql="INSERT INTO monitor (marca, modelo, polegada) VALUES (
       '{$inserir['marca']}',
       '{$inserir['modelo']}',
       '{$inserir['polegada']}'
+   );";
+
+   mysqli_query($conexao, $sql) or die ("Erro ao inserir dados: ".mysqli_error($conexao));
+}
+
+
+function cadastrar_monitor_list($conexao, $inserir){
+   $sql="INSERT INTO listagem_monitor (pa, monitor) VALUES (
+      '{$inserir['pa']}',
+      '{$inserir['monitor']}'
    );";
 
    mysqli_query($conexao, $sql) or die ("Erro ao inserir dados: ".mysqli_error($conexao));

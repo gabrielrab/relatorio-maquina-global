@@ -49,6 +49,7 @@
         <option hidden>Hard Disk</option>
         <option>80 GB</option>
         <option>160 GB</option>
+        <option>250 GB</option>
         <option>320 GB</option>
         <option>500 GB</option>
         <option>720 GB</option>
