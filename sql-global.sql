@@ -44,11 +44,22 @@ ALTER TABLE maquina ADD andar INT NOT NULL AFTER id_maquina;
 ALTER TABLE `maquina`
   DROP `monitor`;
 
-select * from listagem_monitor;
+select * from maquina;
+
+
+
+select processador, count(id_maquina) from maquina group by processador;
+
+select count(id) from listagem_monitor;
+
+select count(id_maquina) from maquina where tipo  = "HP" and processador = "Intel Celeron E3400 - 775 - 2";
+
+select max(pa) from maquina;
+select max(pa) from listagem_monitor;
 
 delete from maquina where id_maquina = 32; # and id_maquina = 2 and id_maquina = 22 and id_maquina = 32;
 
-delete from listagem_monitor where id = 32; #32, 42, 52
+delete from listagem_monitor where id = 62; #32, 42, 52
 
 create table listagem_monitor (
 	id int(11) NOT NULL primary key auto_increment,

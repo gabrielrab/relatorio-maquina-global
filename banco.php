@@ -41,6 +41,12 @@ function listar_maquinas($conexao){
    return mysqli_fetch_all($resultado, MYSQLI_ASSOC);
 }
 
+function all_monitor($conexao){
+   $sql="SELECT * FROM listagem_monitor";
+   $resultado = mysqli_query($conexao, $sql) or die(mysqli_error($conexao));
+   return mysqli_fetch_all($resultado, MYSQLI_ASSOC);
+}
+
 function cadastrar_maquina($conexao, $inserir){
    $sql="INSERT INTO maquina (pa, andar, tipo, processador, hd, memoria) VALUES (
       '{$inserir['pa']}',
